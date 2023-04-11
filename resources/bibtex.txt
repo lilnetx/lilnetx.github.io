@@ -1,0 +1,8 @@
+@inproceedings{
+girish2023lilnetx,
+title={LilNetX: Lightweight Networks with {EX}treme Model Compression and Structured Sparsification},
+author={Sharath Girish and Kamal Gupta and Saurabh Singh and Abhinav Shrivastava},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=NVZvalzCLg}
+}
