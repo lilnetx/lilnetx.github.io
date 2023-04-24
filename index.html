@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>LilNetX</title>
 	<meta property="og:image" content="resources/Teaser_v2.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="LilNetX: Lightweight Networks with EXtreme Model Compression and Structured Sparsification" />
 	<meta property="og:description" content="Paper description." />
@@ -141,6 +141,7 @@
 		<span style="font-size:36px">LilNetX: Lightweight Networks with EXtreme Model Compression and Structured Sparsification</span>
 		<br>
 		<span style="font-size:30px">ICLR 2023</span>
+		<br><br>
 		<table align=center width=750px>
 			<table align=center width=750px>
 				<tr>
@@ -166,7 +167,7 @@
 					</td>
 				</tr>
 			</table>
-			<table align=center width=480px>
+			<table align=center width=580px>
 				<tr>
 					<td align=center width=120px>
 						<center>
@@ -193,17 +194,22 @@
 							<span style="font-size:24px"><a href='https://www.dropbox.com/scl/fi/bfta9fmm2jfaggzebiur3/LilNetX.pptx?dl=0&rlkey=jwnb0fopnov25chff17ejfo84'>[Slides]</a></span><br>
 						</center>
 					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://www.dropbox.com/s/foasj8g7bcktjn4/LilNetX%20Poster.pdf?dl=0'>[Poster]</a></span><br>
+						</center>
+					</td>
 				</tr>
 			</table>
 		</table>
 	</center>
 
 	<center>
-		<table align=center width=850px>
+		<table align=center width=550px>
 			<tr>
 				<td width=500px>
 					<center>
-						<img class="round" style="width:850px" src="./resources/Teaser_v2.png"/>
+						<img class="round" style="width:550px" src="./resources/teaser.png"/>
 					</center>
 				</td>
 			</tr>
@@ -212,9 +218,11 @@
 			<tr>
 				<td>
                     We introduce an <b>end-to-end framework for jointly reducing model size on disk and faster inference</b>. 
-                    Our approach maintains <b>quantized latent representations for efficient storage</b> which can be decoded to obtain <b>sparse model weights for faster inference</b>.
-                    We utilize a special type of slice sparsity for obtaining inference speedups without hardware modifications.
-                    Our approach requirs no post-hoc training stages and can be applied to any task.
+					Prior works such as pruning based approaches (&#9650) optimize for compute in terms of FLOPs (y-axis) and have low
+					reductions in model size on disk (x-axis). Codebook quantization based approaches (&#9632) on the other hand, 
+					optimize for model size and have very little compute reduction. We jointly optimize for both quantities in an <b>end-to-end</b>
+					manner achieving higher levels of reduction.
+
 				</td>
 			</tr>
 		</table>
@@ -246,18 +254,18 @@
 		<center><h1>Joint optimization</h1></center>
 
 		<tr>
-			<td width=500px>
+			<td width=850px>
 				<center>
-					<img class="round" style="width:500px" src="./resources/teaser.png"/>
+					<img class="round" style="width:500px" src="./resources/Teaser_v2.png"/>
 				</center>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				Prior works such as pruning based approaches (&#9650) optimize for compute in terms of FLOPs (y-axis) and have low
-				reductions in model size on disk (x-axis). Codebook quantization based approaches (&#9632) on the other hand, 
-				optimize for model size and have very little compute reduction. We jointly optimize for both quantities in an end-to-end
-				manner with little to no performance drops.
+				Our approach maintains <b>quantized latent representations for efficient storage</b> which can be decoded to obtain <b>sparse model weights for faster inference</b>.
+				We utilize a special type of slice sparsity for obtaining inference speedups without hardware modifications. A joint loss function is optimized simultaenously
+				for downstream performance, model size, and compute.
+				Our approach is generalizable requiring no post-hoc training stages and can be applied to any task.
 			</td>
 		</tr>
 		
@@ -267,7 +275,7 @@
 	<hr>
 	<center><h1>Video</h1></center>
 	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/watch?v=RD9aTiqGchM&ab_channel=SharathGirish" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
+		<iframe width="660" height="395" src="https://www.youtube.com/embed/RD9aTiqGchM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
 	</p>
 
 	<table align=center width=800px>
